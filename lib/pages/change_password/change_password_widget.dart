@@ -1,4 +1,4 @@
-import '/auth/auth_util.dart';
+import '/auth/firebase_auth/auth_util.dart';
 import '/flutter_flow/flutter_flow_theme.dart';
 import '/flutter_flow/flutter_flow_util.dart';
 import '/flutter_flow/flutter_flow_widgets.dart';
@@ -143,7 +143,7 @@ class _ChangePasswordWidgetState extends State<ChangePasswordWidget> {
                     );
                     return;
                   }
-                  await resetPassword(
+                  await authManager.resetPassword(
                     email: _model.emailAddressController.text,
                     context: context,
                   );

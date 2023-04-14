@@ -1,4 +1,4 @@
-import '/auth/auth_util.dart';
+import '/auth/firebase_auth/auth_util.dart';
 import '/backend/backend.dart';
 import '/flutter_flow/flutter_flow_theme.dart';
 import '/flutter_flow/flutter_flow_util.dart';
@@ -332,7 +332,7 @@ class _RegisterWidgetState extends State<RegisterWidget> {
                       return;
                     }
 
-                    final user = await createAccountWithEmail(
+                    final user = await authManager.createAccountWithEmail(
                       context,
                       _model.emailAddressController.text,
                       _model.passwordController.text,
@@ -432,7 +432,7 @@ class _RegisterWidgetState extends State<RegisterWidget> {
                   padding: EdgeInsetsDirectional.fromSTEB(0.0, 12.0, 0.0, 10.0),
                   child: FFButtonWidget(
                     onPressed: () async {
-                      final user = await signInAnonymously(context);
+                      final user = await authManager.signInAnonymously(context);
                       if (user == null) {
                         return;
                       }
