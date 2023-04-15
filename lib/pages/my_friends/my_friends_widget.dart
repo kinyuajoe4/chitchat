@@ -236,6 +236,12 @@ class _MyFriendsWidgetState extends State<MyFriendsWidget> {
                                             ),
                                           ],
                                         ),
+                                        Text(
+                                          dateTimeFormat(
+                                              'jm', getCurrentTimestamp),
+                                          style: FlutterFlowTheme.of(context)
+                                              .bodyMedium,
+                                        ),
                                       ],
                                     ),
                                   ),
