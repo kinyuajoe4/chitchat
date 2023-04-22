@@ -274,6 +274,10 @@ class _ChatDetailsWidgetState extends State<ChatDetailsWidget> {
         backgroundColor: FlutterFlowTheme.of(context).primary,
         automaticallyImplyLeading: false,
         leading: InkWell(
+          splashColor: Colors.transparent,
+          focusColor: Colors.transparent,
+          hoverColor: Colors.transparent,
+          highlightColor: Colors.transparent,
           onTap: () async {
             await Navigator.push(
               context,
@@ -302,6 +306,10 @@ class _ChatDetailsWidgetState extends State<ChatDetailsWidget> {
           Padding(
             padding: EdgeInsetsDirectional.fromSTEB(0.0, 0.0, 16.0, 0.0),
             child: InkWell(
+              splashColor: Colors.transparent,
+              focusColor: Colors.transparent,
+              hoverColor: Colors.transparent,
+              highlightColor: Colors.transparent,
               onTap: () async {
                 scaffoldKey.currentState!.openEndDrawer();
               },

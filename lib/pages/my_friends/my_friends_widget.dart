@@ -136,6 +136,10 @@ class _MyFriendsWidgetState extends State<MyFriendsWidget> {
                               ),
                             ),
                             child: InkWell(
+                              splashColor: Colors.transparent,
+                              focusColor: Colors.transparent,
+                              hoverColor: Colors.transparent,
+                              highlightColor: Colors.transparent,
                               onTap: () async {
                                 await Navigator.push(
                                   context,

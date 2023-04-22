@@ -66,6 +66,10 @@ class _CompleteProfileWidgetState extends State<CompleteProfileWidget> {
             child: Padding(
               padding: EdgeInsetsDirectional.fromSTEB(0.0, 20.0, 0.0, 0.0),
               child: InkWell(
+                splashColor: Colors.transparent,
+                focusColor: Colors.transparent,
+                hoverColor: Colors.transparent,
+                highlightColor: Colors.transparent,
                 onTap: () async {
                   final selectedMedia = await selectMedia(
                     maxWidth: 1000.00,
@@ -91,6 +95,7 @@ class _CompleteProfileWidgetState extends State<CompleteProfileWidget> {
                                 bytes: m.bytes,
                                 height: m.dimensions?.height,
                                 width: m.dimensions?.width,
+                                blurHash: m.blurHash,
                               ))
                           .toList();
 

@@ -140,6 +140,10 @@ class _MyProfileWidgetState extends State<MyProfileWidget>
                                       padding: EdgeInsetsDirectional.fromSTEB(
                                           0.0, 160.0, 0.0, 0.0),
                                       child: InkWell(
+                                        splashColor: Colors.transparent,
+                                        focusColor: Colors.transparent,
+                                        hoverColor: Colors.transparent,
+                                        highlightColor: Colors.transparent,
                                         onTap: () async {
                                           final selectedMedia =
                                               await selectMedia(
@@ -180,6 +184,8 @@ class _MyProfileWidgetState extends State<MyProfileWidget>
                                                                 width: m
                                                                     .dimensions
                                                                     ?.width,
+                                                                blurHash:
+                                                                    m.blurHash,
                                                               ))
                                                       .toList();
 
@@ -319,6 +325,10 @@ class _MyProfileWidgetState extends State<MyProfileWidget>
                   children: [
                     if (!(Theme.of(context).brightness == Brightness.dark))
                       InkWell(
+                        splashColor: Colors.transparent,
+                        focusColor: Colors.transparent,
+                        hoverColor: Colors.transparent,
+                        highlightColor: Colors.transparent,
                         onTap: () async {
                           setDarkModeSetting(context, ThemeMode.dark);
                           if (animationsMap[
@@ -419,6 +429,10 @@ class _MyProfileWidgetState extends State<MyProfileWidget>
                       ),
                     if (Theme.of(context).brightness == Brightness.dark)
                       InkWell(
+                        splashColor: Colors.transparent,
+                        focusColor: Colors.transparent,
+                        hoverColor: Colors.transparent,
+                        highlightColor: Colors.transparent,
                         onTap: () async {
                           setDarkModeSetting(context, ThemeMode.light);
                           if (animationsMap[
@@ -575,6 +589,10 @@ class _MyProfileWidgetState extends State<MyProfileWidget>
                                   shape: BoxShape.rectangle,
                                 ),
                                 child: InkWell(
+                                  splashColor: Colors.transparent,
+                                  focusColor: Colors.transparent,
+                                  hoverColor: Colors.transparent,
+                                  highlightColor: Colors.transparent,
                                   onTap: () async {
                                     await Navigator.push(
                                       context,
@@ -641,6 +659,10 @@ class _MyProfileWidgetState extends State<MyProfileWidget>
                                 shape: BoxShape.rectangle,
                               ),
                               child: InkWell(
+                                splashColor: Colors.transparent,
+                                focusColor: Colors.transparent,
+                                hoverColor: Colors.transparent,
+                                highlightColor: Colors.transparent,
                                 onTap: () async {
                                   await Navigator.push(
                                     context,
