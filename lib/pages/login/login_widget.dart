@@ -30,6 +30,7 @@ class _LoginWidgetState extends State<LoginWidget> {
 
     _model.emailTextController ??= TextEditingController();
     _model.passwordTextController ??= TextEditingController();
+    _model.textController ??= TextEditingController();
   }
 
   @override
@@ -349,6 +350,58 @@ class _LoginWidgetState extends State<LoginWidget> {
                       borderRadius: BorderRadius.circular(30.0),
                     ),
                   ),
+                ),
+                TextFormField(
+                  controller: _model.textController,
+                  autofocus: true,
+                  obscureText: false,
+                  decoration: InputDecoration(
+                    hintText: '[Some hint text...]',
+                    hintStyle: FlutterFlowTheme.of(context).bodySmall,
+                    enabledBorder: UnderlineInputBorder(
+                      borderSide: BorderSide(
+                        color: Color(0x00000000),
+                        width: 1.0,
+                      ),
+                      borderRadius: const BorderRadius.only(
+                        topLeft: Radius.circular(4.0),
+                        topRight: Radius.circular(4.0),
+                      ),
+                    ),
+                    focusedBorder: UnderlineInputBorder(
+                      borderSide: BorderSide(
+                        color: Color(0x00000000),
+                        width: 1.0,
+                      ),
+                      borderRadius: const BorderRadius.only(
+                        topLeft: Radius.circular(4.0),
+                        topRight: Radius.circular(4.0),
+                      ),
+                    ),
+                    errorBorder: UnderlineInputBorder(
+                      borderSide: BorderSide(
+                        color: Color(0x00000000),
+                        width: 1.0,
+                      ),
+                      borderRadius: const BorderRadius.only(
+                        topLeft: Radius.circular(4.0),
+                        topRight: Radius.circular(4.0),
+                      ),
+                    ),
+                    focusedErrorBorder: UnderlineInputBorder(
+                      borderSide: BorderSide(
+                        color: Color(0x00000000),
+                        width: 1.0,
+                      ),
+                      borderRadius: const BorderRadius.only(
+                        topLeft: Radius.circular(4.0),
+                        topRight: Radius.circular(4.0),
+                      ),
+                    ),
+                  ),
+                  style: FlutterFlowTheme.of(context).bodyMedium,
+                  validator:
+                      _model.textControllerValidator.asValidator(context),
                 ),
               ],
             ),
